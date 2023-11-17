@@ -1,19 +1,30 @@
 import './App.css';
 import styled from 'styled-components';
+import {Header} from "./layouts/header/Header";
+import {Sidebar} from "./layouts/sidebar/Sidebar";
+import React from "react";
+import {ContentBox} from "./layouts/content/ContentBox";
 
 
-function App() {
+type AppPropsTypes = {
+    id?: string
+}
+
+function App(props: AppPropsTypes) {
     return (
-        <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
-        </div>
+        <StyledApp className="App" id={"home"}>
+            <Header/>
+            <Sidebar/>
+            <ContentBox/>
+        </StyledApp>
     );
 }
 
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;`
 export default App;
 
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
