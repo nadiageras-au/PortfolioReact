@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import {Main} from "../main/Main";
-import {Skills} from "../skills/Skills";
-import {StyledSectionSubTitle} from "../../components/headings/SectionSubTitle.styled";
-import {Projects} from "../projects/Projects";
-import {Contacts} from "../contacts/Contacts";
+import {Main} from "../sections/main/Main";
+import {Skills} from "../sections/skills/Skills";
+import {StyledSectionTitle} from "../../components/headings/SectionTitle.styled";
+import {Projects} from "../sections/projects/Projects";
+import {Contacts} from "../sections/contacts/Contacts";
 
 
 export const ContentBox = () => {
@@ -16,7 +16,7 @@ export const ContentBox = () => {
             <Main/>
 
             <StyledContentTitle>
-                Skills
+                My Skills & Tech Stack
             </StyledContentTitle>
 
             <Skills/>

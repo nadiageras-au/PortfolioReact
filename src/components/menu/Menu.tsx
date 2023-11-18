@@ -22,14 +22,14 @@ const StyledMenu = styled.nav`
     gap: 25px;
     color: white;
     
+    li {
+      list-style: none;
+    }
+    
     a {
       color: inherit;
-     text-decoration: none;
+      text-decoration: none;
     }
-  }
-  
-  & li > ul > li {
-    display: none;
   }
 `
 

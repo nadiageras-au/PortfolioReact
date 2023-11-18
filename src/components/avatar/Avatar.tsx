@@ -52,6 +52,7 @@ export const Avatar = () => {
 // };
 
 const StyledDiv = styled.div`
+  margin-top: 35px;
   margin-bottom: 20px;
   & svg {
     transition: filter 0.2s linear;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {StyledParagraph} from "../../components/paragraph/Paragraph.styled";
-import {StyledSectionSubTitle} from "../../components/headings/SectionSubTitle.styled";
+import {StyledParagraph} from "../../../components/paragraph/Paragraph.styled";
+import {StyledSectionTitle} from "../../../components/headings/SectionTitle.styled";
 import {Projects} from "../projects/Projects";
 
 export const Main = () => {
@@ -13,18 +13,18 @@ export const Main = () => {
                 scale.
                 </StyledParagraph>
 
-            <StyledSectionSubTitle>
+            <StyledSectionTitle>
                 Education
-            </StyledSectionSubTitle>
+            </StyledSectionTitle>
 
             <StyledParagraph>
                     I create inclusive, accessible digital products, with experience working with startups and enterprise
                     products. I believe in using product design as a tool to elevate human interaction with technology that
                     scale.
             </StyledParagraph>
-            <StyledSectionSubTitle>
+            <StyledSectionTitle>
                 Work Experience
-            </StyledSectionSubTitle>
+            </StyledSectionTitle>
 
             <StyledParagraph>
                 I create inclusive, accessible digital products, with experience working with startups and enterprise
