@@ -24,6 +24,12 @@ export const Main = () => {
                 products. I believe in using product design as a tool to elevate human interaction with technology that
                 scale.
             </StyledParagraph>
+
+            <StyledParagraph>
+                I create inclusive, accessible digital products, with experience working with startups and enterprise
+                products. I believe in using product design as a tool to elevate human interaction with technology that
+                scale.
+            </StyledParagraph>
             <h3>
                 Work Experience
             </h3>

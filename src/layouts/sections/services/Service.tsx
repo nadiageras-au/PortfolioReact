@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/headings/SectionTitle.styled";
+import {StyledParagraph} from "../../../components/paragraph/Paragraph.styled";
 
 type ServiceItemPropsType = {
     src:string
@@ -9,7 +10,7 @@ export const ServiceItem = (props: ServiceItemPropsType) => {
     return (
         <StyledServiceItem src={props.src}>
         <ServiceTitle>Web Design</ServiceTitle>
-            <ServiceText>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congueonsectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</ServiceText>
+            <StyledParagraph>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congueonsectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue</StyledParagraph>
 
 
         </StyledServiceItem>
@@ -33,7 +34,7 @@ font-size: 26px;
   color: lawngreen;
 `
 
-const ServiceText = styled.p`
-  font-size: 16px;
-  color: #a9a900;
-`
+// const ServiceText = styled.p`
+//   font-size: 16px;
+//   color: #a9a900;
+// `
