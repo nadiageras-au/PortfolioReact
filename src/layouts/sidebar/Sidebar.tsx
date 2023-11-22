@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Avatar} from "../../components/avatar/Avatar";
+import {Avatar, Avatar_} from "../../components/avatar/Avatar";
 import {myTheme} from "../../styles/Theme.styled";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {StyledButton} from "../../components/button/Button.styled";
@@ -12,7 +12,8 @@ export const Sidebar = () => {
     return (
         <StyledSidebar>
 
-                <Avatar/>
+            {/*<Avatar/>*/}
+            <Avatar_/>
             <FlexWrapper direction={"column"} align={"center"} gap={"20px"} flex={"1"}>
                 <StyledName>
                     Nadia Gerasimova
@@ -30,7 +31,7 @@ export const Sidebar = () => {
 
                 <FlexWrapper direction={'row'} justify={"center"}>
                     <StyledButton>
-                        My projects
+                        My CV
                     </StyledButton>
 
                     <StyledButton>
@@ -40,11 +41,27 @@ export const Sidebar = () => {
             </FlexWrapper>
 
             <StyledSidebarFooter>
-                <FlexWrapper justify={"center"} gap={"20px"}>
-                    <Icon iconId={"github"}  width={"32"} height={"32"}/>
-                    <Icon iconId={"linkedin"} width={"32"} height={"32"}/>
-                    <Icon iconId={"screens"} width={"32"} height={"32"}/>
-                </FlexWrapper>
+                <SocialIconsList>
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"github"} width={"32"} height={"32"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"linkedin"} width={"32"} height={"32"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"screens"} width={"32"} height={"32"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+
+                </SocialIconsList>
             </StyledSidebarFooter>
         </StyledSidebar>
     );
@@ -55,7 +72,7 @@ const StyledSidebar = styled.aside`
   flex-direction: column;
   min-height: 100vh;
   width: 300px;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -91,5 +108,20 @@ const StyledText = styled.p`
 
 const StyledSidebarFooter = styled.div`
   background-color: #4dc5cc;
+  text-align: center;
   padding: 10px 45px;
+
+`
+
+const SocialIconsList = styled.ul`
+  display: flex;
+  gap: 12px;
+  margin: 0 auto;
+`
+
+const SocialIconsItem = styled.li`
+list-style: none;
+`
+const SocialIconLink = styled.a`
+cursor: pointer;
 `

@@ -1,30 +1,32 @@
 import React from 'react';
 import styled from "styled-components";
 import {StyledParagraph} from "../../../components/paragraph/Paragraph.styled";
-import {StyledSectionTitle} from "../../../components/headings/SectionTitle.styled";
-import {Projects} from "../projects/Projects";
+import {SectionTitle} from "../../../components/headings/SectionTitle.styled";
 
 export const Main = () => {
     return (
         <StyledMain>
+            <SectionTitle>
+             About
+            </SectionTitle>
             <StyledParagraph>
                 I create inclusive, accessible digital products, with experience working with startups and enterprise
                 products. I believe in using product design as a tool to elevate human interaction with technology that
                 scale.
-                </StyledParagraph>
+            </StyledParagraph>
 
-            <StyledSectionTitle>
+            <h3>
                 Education
-            </StyledSectionTitle>
+            </h3>
 
             <StyledParagraph>
-                    I create inclusive, accessible digital products, with experience working with startups and enterprise
-                    products. I believe in using product design as a tool to elevate human interaction with technology that
-                    scale.
+                I create inclusive, accessible digital products, with experience working with startups and enterprise
+                products. I believe in using product design as a tool to elevate human interaction with technology that
+                scale.
             </StyledParagraph>
-            <StyledSectionTitle>
+            <h3>
                 Work Experience
-            </StyledSectionTitle>
+            </h3>
 
             <StyledParagraph>
                 I create inclusive, accessible digital products, with experience working with startups and enterprise
@@ -34,11 +36,12 @@ export const Main = () => {
 
 
         </StyledMain>
-)
-    ;
+    )
+        ;
 };
 
 const StyledMain = styled.section`
+  heigth: (100vh-50px);
 
   background-color: #ffb4dd;
 `

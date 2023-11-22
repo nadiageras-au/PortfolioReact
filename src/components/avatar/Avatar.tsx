@@ -2,102 +2,72 @@ import React from 'react';
 import imgsrc from "../../assets/img/icons/sprite.svg";
 import styled from "styled-components";
 import {Icon} from "../icon/Icon";
+import nadia from "../../assets/img/icons/avatar.svg"
 
 // Icon Programming Girl
 export const Avatar = () => {
     return (
         <StyledDiv>
-            {/*Screens svg-icon работает правильно*/}
-            {/*<svg width="100%" height="150">*/}
-            {/*    <use xlinkHref={`${imgsrc}#screens`}/>*/}
-            {/*</svg>*/}
-
-            {/*=======================*/}
-
-
-
-
             <svg width="100%" height="180">
                 <use xlinkHref={`${imgsrc}#programmer`}/>
             </svg>
-
-            {/*<svg width="112" height="121">*/}
-            {/*    <use xlinkHref={`${imgsrc}#figmabw`}/>*/}
-            {/*</svg>*/}
-
-            {/*<svg width="400" height="600">*/}
-            {/*    <use xlinkHref={`${imgsrc}#discord`}/>*/}
-            {/*</svg>*/}
-
-            {/*<svg width="112" height="121">*/}
-            {/*    <use xlinkHref={`${imgsrc}#git-hub`}/>*/}
-            {/*</svg>*/}
-
-            {/*<svg width="112" height="121">*/}
-            {/*    <use xlinkHref={`${imgsrc}#css`}/>*/}
-            {/*</svg>*/}
-
-            {/*<Icon iconId={'programmer'} width={"224"} height={"242"}/>*/}
         </StyledDiv>
     );
 }
 
 // Photo of me
-// export const Avatar_ = () => {
-//     return (
-//         <StyledNeonCircle>
-//             <img src={avatar}/>
-//         </StyledNeonCircle>
-//     );
-// };
+export const Avatar_ = () => {
+    return (
+<StyledDiv>
+        <StyledNeonCircle>
+            <img src={nadia}/>
+        </StyledNeonCircle>
+</StyledDiv>
+    );
+};
 
 const StyledDiv = styled.div`
-  margin-top: 35px;
-  margin-bottom: 20px;
+  //margin-top: 35px;
+  padding-top: 80px;
+  margin-bottom: 50px;
+  
   & svg {
     transition: filter 0.2s linear;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 3px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 5px rgba(251, 233, 253, 0.5));
-  }
-
-  & svg:hover {
     filter: drop-shadow(0px 0px 3px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 5px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 7px rgba(251, 135, 255, 0.25));
   }
 `
 
-// const StyledNeonCircle = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-//
-//   width: 180px;
-//   height: 180px;
-//   border-radius: 50%;
-//   border: 4px solid #ffd6eb;
-//   z-index: 500;
-//
-//   //box-shadow: 0px 0px 20px 3px #FE259B inset, 0px 0px 25px 0px #FE259B inset, 0px 0px 10px 0px #FE259B inset;
-//   //filter: drop-shadow(0px 4px 10px #FE259B) drop-shadow(0px 0px 25px rgba(254, 37, 155, 0.61)) drop-shadow(0px 0px 50px #FE259B);
-//
-//   transition: border .1s ease-in-out, filter .1s ease-in-out;
-//
-//   img {
-//     display: block;
-//     height: auto;
-//     opacity: .82;
-//     z-index: 499;
-//   }
-//
-//   &:hover {
-//     border-color:#fcf7f9;
-//     box-shadow:0px 0px 20px 5px (rgba 254,37,155, 0.05) inset, 0px 0px 10px 0px (rgba 254,37,155, 0.05) inset, 0px 0px 5px 0px (rgba 254,37,155, 0.05) inset;
-//
-//             //0px 0px 20px 5px #FE259B inset, 0px 0px 40px 0px #FE259B inset, 0px 0px 20px 0px #FE259B inset;
-//             //
-//             //
-//     filter: drop-shadow(0px 5px 10px rgba(254,37,155, 0.05)) drop-shadow(0px 0px 0px rgba(254,37,155,0.04)) drop-shadow(0px 0px 3px rgba(254,37,155, 0.05));
-//
-//             //drop-shadow(0px 5px 10px #FE259B) drop-shadow(0px 0px 8px rgba(254, 37, 155, 0.80)) drop-shadow(0px 0px 3px #FE259B);
-//   }
-// `
+const StyledNeonCircle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0 auto;
+
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #ffd6eb;
+  z-index: 500;
+  filter: drop-shadow(0px 5px 10px rgba(254, 37, 155, 0.10)) drop-shadow(0px 0px 0px rgba(254, 37, 155, 0.10)) drop-shadow(0px 0px 3px rgba(254, 37, 155, 0.25));
+  
+  transition: box-shadow .3s ease-in-out, filter .3s ease-in-out;
+
+  img {
+    display: block;
+    height: auto;
+    max-height: 161%;
+    opacity: .72;
+    z-index: 499;
+    cursor: pointer;
+  }
+
+  &:hover {
+    border-color: #fad6e5;
+    box-shadow: 0px 0px 5px 15px (rgba 254, 37, 155, 0.45)inset, 0 px 0 px 5 px 10 px(rgba 254, 37, 155, 0.45)inset, 0 px 0 px 5 px 0 px(rgba 254, 37, 155, 0.45)inset;
+    box-shadow: 0px 0px 5px 0px #FE259B inset, 0px 4px 10px 0px #FE259B, 0px 0px 25px 10px rgba(254, 37, 155, 0.61), 0px 0px 45px 0px #FE259B inset, 0px 0px 70px 0px #FE259B, 0px 0px 80px 0px #FE259B inset;
+    filter: drop-shadow(0px 0px 20px rgba(254, 37, 155, 0.10)) drop-shadow(0px 0px 5px rgba(254, 37, 155, 0.10)) drop-shadow(0px 0px 6px rgba(254, 37, 155, 0.25));
+
+  }
+`

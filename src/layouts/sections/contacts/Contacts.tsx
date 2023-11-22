@@ -1,23 +1,25 @@
 import React from 'react';
 import styled from "styled-components";
-import {StyledSectionTitle} from "../../../components/headings/SectionTitle.styled";
+import {SectionTitle} from "../../../components/headings/SectionTitle.styled";
 import {StyledParagraph} from "../../../components/paragraph/Paragraph.styled";
+import {ContactForm} from "../../../components/form/ContactForm";
 
 export const Contacts = () => {
     return (
         <StyledContacts>
-            <StyledSectionTitle>
-                Contact me
-            </StyledSectionTitle>
+            <SectionTitle>
+                Let's be in Touch
+            </SectionTitle>
             <StyledParagraph>
-                I create inclusive, accessible digital products, with experience working with startups and enterprise
-                products. I believe in using product design as a tool to elevate human interaction with technology that
-                scale.
+                Please, don’t hesitate and feel free to contact if you wanna collaborate with me, or simply have a
+                conversation.
             </StyledParagraph>
+            <ContactForm/>
+
         </StyledContacts>
     );
 };
 
 const StyledContacts = styled.section`
-  background-color: #fc7b21;
+  background-color: rgba(250, 182, 140, 0.81);
 `

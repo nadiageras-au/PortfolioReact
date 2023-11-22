@@ -9,16 +9,10 @@ type IconPropsType = {
 }
 export const Icon = (props: IconPropsType) => {
     return (
-        <StyledBorderBox>
             <svg width={props.width || "50"} height={props.height || "50"}>
                 <use xlinkHref={`${imgsrc}#${props.iconId}`}/>
             </svg>
-        </StyledBorderBox>
     )
         ;
 }
 
-const StyledBorderBox = styled.div`
-  border: 1px solid white;
-
-`

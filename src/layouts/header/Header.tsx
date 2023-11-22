@@ -2,10 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import {Menu} from "../../components/menu/Menu";
 
+const items = ["Home", "Skills","Services","Projects", "Contacts"];
 export const Header = () => {
     return (
         <StyledHeader>
-           <Menu/>
+           <Menu menuItems={items}/>
         </StyledHeader>
     );
 };
