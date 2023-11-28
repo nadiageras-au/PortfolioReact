@@ -1,23 +1,16 @@
 export const myTheme = {
- fonts: {
-    TiltNeon: "'Tilt Neon', sans-serif",
-    FiraCode: "'Fira Code', monospace"
- }
+    fonts: {
+        TiltNeon: "'Tilt Neon', sans-serif",
+        FiraCode: "'Fira Code', monospace"
+    },
+    colors: {
+        sidebarBg: "#202020",
+        menuBg: "#202020",
+        contentBg: "#282C33",
+        accentOne: "rgb(254,37,155)",
+        accentTwo: "#fffec3",
 
-    // colors: {
-    //     primary: "#000",
-    //     secondary: "#fff",
-    //     accent: "#4E71FE",
-    //     grey: {
-    //         dark: "#595858",
-    //         light: "#ABB3BA"
-    //     }
-    // },
-//     btn: {
-//         display: "block",
-//         min-width:"86px",
-//     height:"30px",
-//     marginright:"15px",
-//     border:"none"
-// }
+        fontColor: "#fff",
+    },
+
 }

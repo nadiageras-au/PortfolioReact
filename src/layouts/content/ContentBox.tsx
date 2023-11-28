@@ -5,6 +5,7 @@ import {Skills} from "../sections/skills/Skills";
 import {Projects} from "../sections/projects/Projects";
 import {Contacts} from "../sections/contacts/Contacts";
 import {Services} from "../sections/services/Services";
+import {myTheme} from "../../styles/Theme.styled";
 
 
 export const ContentBox = () => {
@@ -19,8 +20,8 @@ export const ContentBox = () => {
     );
 };
 
-const StyledBox = styled.div`
-  background-color: beige;
-  padding: 10rem 0 8rem 300px;
-  height: 100%;
+const StyledBox = styled.main`
+  background-color:${myTheme.colors.contentBg};
+  padding: 100px 0 100px 300px;
+
 `

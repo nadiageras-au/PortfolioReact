@@ -12,15 +12,15 @@ export const Sidebar = () => {
     return (
         <StyledSidebar>
 
-            {/*<Avatar/>*/}
-            <Avatar_/>
+            <Avatar/>
+            {/*<Avatar_/>*/}
             <FlexWrapper direction={"column"} align={"center"} gap={"20px"} flex={"1"}>
                 <StyledName>
                     Nadia Gerasimova
                 </StyledName>
 
                 <StyledMainTitle>
-                    Front End Developer.
+                    Front End Developer
                 </StyledMainTitle>
 
                 <StyledText>
@@ -30,11 +30,11 @@ export const Sidebar = () => {
                 </StyledText>
 
                 <FlexWrapper direction={'row'} justify={"center"}>
-                    <StyledButton>
+                    <StyledButton as="a" btnType={"outlined"}>
                         My CV
                     </StyledButton>
 
-                    <StyledButton>
+                    <StyledButton as="a" btnType={"primary"}>
                         Contacts
                     </StyledButton>
                 </FlexWrapper>
@@ -44,19 +44,19 @@ export const Sidebar = () => {
                 <SocialIconsList>
                     <SocialIconsItem>
                         <SocialIconLink>
-                            <Icon iconId={"github"} width={"32"} height={"32"}/>
+                            <Icon iconId={"github"} width={"24"} height={"24"}/>
                         </SocialIconLink>
                     </SocialIconsItem>
 
                     <SocialIconsItem>
                         <SocialIconLink>
-                            <Icon iconId={"linkedin"} width={"32"} height={"32"}/>
+                            <Icon iconId={"linkedin"} width={"24"} height={"24"}/>
                         </SocialIconLink>
                     </SocialIconsItem>
 
                     <SocialIconsItem>
                         <SocialIconLink>
-                            <Icon iconId={"screens"} width={"32"} height={"32"}/>
+                            <Icon iconId={"tlg"} width={"24"} height={"24"}/>
                         </SocialIconLink>
                     </SocialIconsItem>
 
@@ -78,24 +78,25 @@ const StyledSidebar = styled.aside`
   left: 0;
   z-index: 1000;
 
-  background-color: #333333;
+  //background-color: #333333; 
+  background-color: ${myTheme.colors.sidebarBg};
 `
 
-const StyledName = styled.div`
-  font-family: ${myTheme.fonts.FiraCode};
+const StyledName = styled.span`
+  font-family: ${myTheme.fonts.TiltNeon};
   font-weight: 500;
   font-size: 20px;
   color: #ffffff;
 `
 
 const StyledMainTitle = styled.h1`
-  padding: 0;
-  margin: 0;
+  margin-bottom: 40px;
   font-family: ${myTheme.fonts.FiraCode};
-  font-size: 18px;
-  font-weight: 300;
-  color: #dedede;
   text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: ${myTheme.colors.accentOne};
+
   max-width: 270px;
 `
 
@@ -104,13 +105,12 @@ const StyledText = styled.p`
   color: #dedede;
   padding: 0 15px;
   text-align: center;
+  margin-bottom: 30px;
 `
 
 const StyledSidebarFooter = styled.div`
-  background-color: #4dc5cc;
-  text-align: center;
-  padding: 10px 45px;
-
+  display: flex;
+  padding: 10px 0px;
 `
 
 const SocialIconsList = styled.ul`
@@ -124,4 +124,11 @@ list-style: none;
 `
 const SocialIconLink = styled.a`
 cursor: pointer;
+  transition: transform .7s linear ;
+  
+  &:hover > svg {
+    transform: scale(1.1);
+  }
+  
+  
 `

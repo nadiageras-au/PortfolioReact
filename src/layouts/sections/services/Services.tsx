@@ -3,22 +3,23 @@ import {SectionTitle} from "../../../components/headings/SectionTitle.styled";
 import styled from "styled-components";
 import {Slider} from "../../../components/slider/Slider";
 import {ServiceItem} from "./Service";
+import {Container} from "../../../components/container/Container";
 
 
 export const Services = () => {
     return (
         <StyledServices>
-            <SectionTitle>
-                Services
-            </SectionTitle>
-            <Slider/>
+            <Container>
+                <SectionTitle>
+                    Services
+                </SectionTitle>
+                <Slider/>
+            </Container>
         </StyledServices>
     );
 };
 
 const StyledServices = styled.section`
-  max-width: 980px;
   width: 100%;
-  margin: 0 auto;
 `
 

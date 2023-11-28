@@ -2,15 +2,19 @@ import React from 'react';
 import imgsrc from "../../assets/img/icons/sprite.svg";
 import styled from "styled-components";
 import {Icon} from "../icon/Icon";
-import nadia from "../../assets/img/icons/avatar.svg"
+// import nadia from "../../assets/img/icons/avatar.svg"
+import avatar from "../../assets/img/sidebar-avatar.jpg"
+import {myTheme} from "../../styles/Theme.styled";
 
 // Icon Programming Girl
 export const Avatar = () => {
     return (
         <StyledDiv>
-            <svg width="100%" height="180">
-                <use xlinkHref={`${imgsrc}#programmer`}/>
-            </svg>
+            <StyledImg src={avatar}/>
+
+            {/*<svg width="100%" height="180">*/}
+            {/*    <use xlinkHref={`${imgsrc}#programmer`}/>*/}
+            {/*</svg>*/}
         </StyledDiv>
     );
 }
@@ -18,31 +22,43 @@ export const Avatar = () => {
 // Photo of me
 export const Avatar_ = () => {
     return (
-<StyledDiv>
-        <StyledNeonCircle>
-            <img src={nadia}/>
-        </StyledNeonCircle>
-</StyledDiv>
+        <StyledDiv>
+            <StyledNeonCircle>
+                {/*<img src={nadia}/>*/}
+            </StyledNeonCircle>
+        </StyledDiv>
     );
 };
 
 const StyledDiv = styled.div`
   //margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 80px;
   margin-bottom: 50px;
-  
-  & svg {
-    transition: filter 0.2s linear;
-    cursor: pointer;
-    filter: drop-shadow(0px 0px 3px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 5px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 7px rgba(251, 135, 255, 0.25));
-  }
+
+
+  //& svg {
+  //  transition: filter 0.2s linear;
+  //  cursor: pointer;
+  //  filter: drop-shadow(0px 0px 3px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 5px rgba(239, 135, 255, 0.5)) drop-shadow(0px 0px 7px rgba(251, 135, 255, 0.25));
+  //}
+`
+
+const StyledImg = styled.img`
+  height: 100%;
+  display: block;
+  width: auto;
+  border-top: 2px solid ${myTheme.colors.accentOne};
+  border-left: 2px solid ${myTheme.colors.accentOne};
 `
 
 const StyledNeonCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin: 0 auto;
 
   width: 180px;
@@ -51,7 +67,7 @@ const StyledNeonCircle = styled.div`
   border: 3px solid #ffd6eb;
   z-index: 500;
   filter: drop-shadow(0px 5px 10px rgba(254, 37, 155, 0.10)) drop-shadow(0px 0px 0px rgba(254, 37, 155, 0.10)) drop-shadow(0px 0px 3px rgba(254, 37, 155, 0.25));
-  
+
   transition: box-shadow .3s ease-in-out, filter .3s ease-in-out;
 
   img {

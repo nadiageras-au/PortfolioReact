@@ -2,52 +2,69 @@ import React from 'react';
 import styled from "styled-components";
 import {StyledParagraph} from "../../../components/paragraph/Paragraph.styled";
 import {SectionTitle} from "../../../components/headings/SectionTitle.styled";
+import {SectionSubTitle} from "../../../components/headings/SectionSubTitle.styled";
+import {Container} from "../../../components/container/Container";
+import {Wrapper} from "../../../components/helpers/Wrapper";
+import {FlexWrapper} from "../../../components/FlexWrapper";
+import {myTheme} from "../../../styles/Theme.styled";
+import {ArticleAboutSection} from "../../../components/articleAboutSection/ArticleAboutSection.styled";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <SectionTitle>
-             About
-            </SectionTitle>
-            <StyledParagraph>
-                I create inclusive, accessible digital products, with experience working with startups and enterprise
-                products. I believe in using product design as a tool to elevate human interaction with technology that
-                scale.
-            </StyledParagraph>
+            <Container>
+                <SectionTitle>
+                    About
+                </SectionTitle>
+                <Wrapper>
+                    <StyledParagraph>
+                        I create inclusive, accessible digital products, with experience working with startups and
+                        enterprise
+                        products. I believe in using product design as a tool to elevate human interaction with
+                        technology that
+                        scale.
+                    </StyledParagraph>
+                </Wrapper>
 
-            <h3>
-                Education
-            </h3>
+                <SectionSubTitle>
+                    Work Experience
+                </SectionSubTitle>
 
-            <StyledParagraph>
-                I create inclusive, accessible digital products, with experience working with startups and enterprise
-                products. I believe in using product design as a tool to elevate human interaction with technology that
-                scale.
-            </StyledParagraph>
+                <ArticleAboutSection
+                    companyName={"Business Marketing Agency"}
+                    positionName={"Web Developer"}
+                    periodJob={"Jun 2020 - Sept 2020"}
+                    description={"I create inclusive, accessible digital products, with experience working with startups and enterprise products. I believe in using product design as a tool to elevate human interaction with technology that scale."}/>
 
-            <StyledParagraph>
-                I create inclusive, accessible digital products, with experience working with startups and enterprise
-                products. I believe in using product design as a tool to elevate human interaction with technology that
-                scale.
-            </StyledParagraph>
-            <h3>
-                Work Experience
-            </h3>
-
-            <StyledParagraph>
-                I create inclusive, accessible digital products, with experience working with startups and enterprise
-                products. I believe in using product design as a tool to elevate human interaction with technology that
-                scale.
-            </StyledParagraph>
+                <ArticleAboutSection
+                    companyName={"Freelance"}
+                    positionName={"Web Designer"}
+                    periodJob={"Jun 2017 - Jun 2020"}
+                    description={"I create inclusive, accessible digital products, with experience working with startups and enterprise products. I believe in using product design as a tool to elevate human interaction with technology that scale."}/>
 
 
+                <SectionSubTitle>
+                    Education
+                </SectionSubTitle>
+
+                <ArticleAboutSection
+                    companyName={"IT-incubator"}
+                    positionName={"Front End Developer"}
+                    periodJob={"Nov 2023 - current"}
+                    description={"I create inclusive, accessible digital products, with experience working with startups and enterprise products. I believe in using product design as a tool to elevate human interaction with technology that scale."}/>
+
+
+            </Container>
         </StyledMain>
     )
         ;
 };
 
 const StyledMain = styled.section`
-  heigth: (100vh-50px);
-
-  background-color: #ffb4dd;
+  height: (100vh-50px);
 `
+
+
+
+
+
