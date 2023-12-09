@@ -1,62 +1,89 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {myTheme} from "../../../../styles/Theme.styled";
+import {HashtagsList} from "../../../../components/hashtags/HashtagsList";
 
 type ProjectPropsType = {
     projectName: string
     text: string
-    src: string
+    src?: string
+    hashtagsList:Array<string>
 }
+
+
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <Image src={props.src} alt={"image"}/>
-            <FlexWrapper direction={"column"}>
-                <ProjectTitle>{props.projectName}</ProjectTitle>
+            {/*<Image src={props.src} alt={"image"}/>*/}
+            <ProjectTitle>{props.projectName}</ProjectTitle>
+            <ProjectDescription>
                 <Text>{props.text}</Text>
-                <FlexWrapper>
-                    <Hashtag>React</Hashtag>
-                    <Hashtag>Front End</Hashtag>
-                    <Hashtag>SPA</Hashtag>
-                </FlexWrapper>
-
-                <Link href={"#"}></Link>
-                <Link href={"#"}></Link>
-            </FlexWrapper>
-
+                <HashtagsList hashList={props.hashtagsList}/>
+                <Link href={"#"}>View project</Link>
+            </ProjectDescription>
         </StyledProject>
     );
 };
 
 
 const StyledProject = styled.div`
-  background: #dededc;
-  width:100%;
-  max-width: 980px;
-  border: 2px solid deeppink;
+  width: 100%;
+  max-width: 420px;
+  min-height: 300px;
+  border: 2px solid ${myTheme.colors.accentGray};
   display: flex;
-  
+  cursor: pointer;
+
+  position: relative;
+
+  &:hover img {
+    width: 40%;
+  }
+
+  &:hover h3 {
+    left: 43%;
+  }
 `
 const Image = styled.img`
-  width: 70%;
+  width: 100%;
   height: 100%;
-  max-height: 380px;
+
   object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  transition: width .3s linear;
+`
+
+const ProjectDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: auto;
+  margin-right: 0;
+  padding-top: 60px;
+  padding-left: 10px;
 `
 const ProjectTitle = styled.h3`
-color: rebeccapurple`
-const Text = styled.p`
-color: blue`
-const Hashtag = styled.span`
-  display: block;
-  box-sizing: border-box;
-  height: 44px;
-  padding: 15px 25px;
- 
-  line-height: 1;
-  font-size: 12px;
-  background-color: #f8d9ff;
-  color: darkgreen;
+  color: ${myTheme.colors.accentGray};
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  z-index: 3;
 `
+const Text = styled.p`
+  margin-bottom: 15px;
+`
+
 const Link = styled.a`
-text-decoration: none;`
+  color: ${myTheme.colors.accentGray};
+  text-decoration: none;
+  margin-bottom: 30px;
+  
+  
+`
+
+

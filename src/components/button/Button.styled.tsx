@@ -12,11 +12,11 @@ export const StyledButton = styled.button<StyledButtonPropsType>`
   height: 40px;
 
   border-radius: 4px;
-  border-color: ${myTheme.colors.accentOne};
+  border-color: ${myTheme.colors.accentBright};
 
   font-family: ${myTheme.fonts.FiraCode};
   text-transform: uppercase;
-  color: ${myTheme.colors.accentOne};
+  color: ${myTheme.colors.accentBright};
 
   font-size: 12px;
   font-weight: bold;
@@ -25,30 +25,27 @@ export const StyledButton = styled.button<StyledButtonPropsType>`
   ${props => props.btnType === "outlined" && css<StyledButtonPropsType>`
     //outlined
     background: transparent;
-    border: 2px solid ${myTheme.colors.accentOne};
-    color: ${myTheme.colors.accentOne};
+    border: 2px solid ${myTheme.colors.accentBright};
+    color: ${myTheme.colors.accentBright};
     transition: background-color .2s linear, color .2s linear;
 
     &:hover {
-      background-color: ${myTheme.colors.accentOne};
-      color: ${myTheme.colors.sidebarBg};
-      border: 2px solid ${myTheme.colors.accentOne};
+      background-color: ${myTheme.colors.accentBright};
+      border: 2px solid ${myTheme.colors.accentBright};
       outline-width: 0;
     }
   `}
 
   ${props => props.btnType === "primary" && css<StyledButtonPropsType>`
     //primary
-    background-color: ${myTheme.colors.accentOne};
-    color:  ${myTheme.colors.sidebarBg};
-    border: 2px solid ${myTheme.colors.accentOne};
+    background-color: ${myTheme.colors.accentBright};
+    border: 2px solid ${myTheme.colors.accentBright};
 
     transition: background-color .2s linear, color .2s linear;
 
     &:hover {
-      background-color: ${myTheme.colors.sidebarBg};
-      color: ${myTheme.colors.accentOne};
-      border: 2px solid ${myTheme.colors.accentOne};
+      color: ${myTheme.colors.accentBright};
+      border: 2px solid ${myTheme.colors.accentBright};
       outline-width: 0;
     }
   `}

@@ -6,9 +6,8 @@ import imgServ from "../../../src/assets/img/projects/proj2.jpeg"
 export const Slider = () => {
     return (
         <StyledSlider>
-            <Slide>
-                <ServiceItem src={imgServ}/>
-            </Slide>
+            {/*<Slide>*/}
+
         </StyledSlider>
     );
 };

@@ -21,16 +21,13 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${myTheme.colors.fontColor};
+    color: ${myTheme.colors.white};
+    background-color: ${myTheme.colors.colorBg};
   }
 
   a {
     text-decoration: none;
-    color: ${myTheme.colors.accentOne};
-    
-    &:hover {
-      text-decoration: underline;
-    }
+    cursor: pointer;
   }
 
   ul,
@@ -41,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-family: ${myTheme.fonts.FiraCode};
-    color: ${myTheme.colors.accentTwo};
+    color: ${myTheme.colors.white};
     text-shadow: 0px 0px 8px rgba(247, 255, 209, 0.6);
     font-size: 32px;
     font-weight: 500;
@@ -49,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    color: ${myTheme.colors.accentTwo};
+    color: ${myTheme.colors.white};
     text-shadow: 0px 0px 8px #A2A2A2;
     font-family: ${myTheme.fonts.FiraCode};
     font-size: 26px;
@@ -68,6 +65,12 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${myTheme.fonts.FiraCode};
     font-size: 18px;
     font-weight: 400;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: unset;
   }
 
   //@supports (font-variation-settings: normal) {

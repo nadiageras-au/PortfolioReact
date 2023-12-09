@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/headings/SectionTitle.styled";
+import {SectionTitle} from "../../../components/titles/SectionTitle.styled";
 import {StyledParagraph} from "../../../components/paragraph/Paragraph.styled";
 import {ContactForm} from "../../../components/form/ContactForm";
 import {Container} from "../../../components/container/Container";

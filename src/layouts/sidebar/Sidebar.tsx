@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
-import {Avatar, Avatar_} from "../../components/avatar/Avatar";
 import {myTheme} from "../../styles/Theme.styled";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {StyledButton} from "../../components/button/Button.styled";
+import imgPhoto from "../../assets/img/avatar.jpg"
 import {Icon} from "../../components/icon/Icon";
-// import Logo from "../../components/logo/Logo";
 
 
 export const Sidebar = () => {
+    // @ts-ignore
     return (
         <StyledSidebar>
 
-            <Avatar/>
-            {/*<Avatar_/>*/}
             <FlexWrapper direction={"column"} align={"center"} gap={"20px"} flex={"1"}>
+
+                <Avatar srcSet={imgPhoto}/>
                 <StyledName>
                     Nadia Gerasimova
                 </StyledName>
@@ -24,10 +24,36 @@ export const Sidebar = () => {
                 </StyledMainTitle>
 
                 <StyledText>
-                    Website layout practitioner.It is a long established fact that a reader will be distracted by the
-                    readable content of a page when
-                    looking at its layout. The point of using
+                   Based in Brisbane, Australia
                 </StyledText>
+
+                <SocialIconsList>
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"git_circle"} width={"44"} height={"44"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"inst_circle"} width={"44"} height={"44"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"twitter_circle"} width={"24"} height={"24"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+                    <SocialIconsItem>
+                        <SocialIconLink>
+                            <Icon iconId={"linkedin_circle"} width={"24"} height={"24"}/>
+                        </SocialIconLink>
+                    </SocialIconsItem>
+
+
+                </SocialIconsList>
 
                 <FlexWrapper direction={'row'} justify={"center"}>
                     <StyledButton as="a" btnType={"outlined"}>
@@ -41,27 +67,7 @@ export const Sidebar = () => {
             </FlexWrapper>
 
             <StyledSidebarFooter>
-                <SocialIconsList>
-                    <SocialIconsItem>
-                        <SocialIconLink>
-                            <Icon iconId={"github"} width={"24"} height={"24"}/>
-                        </SocialIconLink>
-                    </SocialIconsItem>
 
-                    <SocialIconsItem>
-                        <SocialIconLink>
-                            <Icon iconId={"linkedin"} width={"24"} height={"24"}/>
-                        </SocialIconLink>
-                    </SocialIconsItem>
-
-                    <SocialIconsItem>
-                        <SocialIconLink>
-                            <Icon iconId={"tlg"} width={"24"} height={"24"}/>
-                        </SocialIconLink>
-                    </SocialIconsItem>
-
-
-                </SocialIconsList>
             </StyledSidebarFooter>
         </StyledSidebar>
     );
@@ -70,16 +76,31 @@ export const Sidebar = () => {
 const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width: 300px;
+  padding: 50px 35px 35px;
+  max-height: 100vh;
+  width: 400px;
+  border: 2px solid ${myTheme.colors.accentGray};
+  border-radius: 30px;
 
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 100px;
+  //transform: translateY(-50%);
+  left: 40px;
   z-index: 1000;
+`
 
-  //background-color: #333333; 
-  background-color: ${myTheme.colors.sidebarBg};
+const Avatar = styled.img`
+  display: block;
+  width: 330px;
+  height: 220px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  position: relative;
+  border: 2px solid ${myTheme.colors.accentBright};
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+
+  transform: scaleX(-1);
 `
 
 const StyledName = styled.span`
@@ -95,7 +116,7 @@ const StyledMainTitle = styled.h1`
   text-align: center;
   font-size: 20px;
   font-weight: 500;
-  color: ${myTheme.colors.accentOne};
+  color: ${myTheme.colors.accentBright};
 
   max-width: 270px;
 `
@@ -123,12 +144,12 @@ const SocialIconsItem = styled.li`
 list-style: none;
 `
 const SocialIconLink = styled.a`
-cursor: pointer;
-  transition: transform .7s linear ;
-  
+  cursor: pointer;
+  transition: transform .7s linear;
+
   &:hover > svg {
     transform: scale(1.1);
   }
-  
-  
+
+
 `

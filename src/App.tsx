@@ -13,7 +13,6 @@ type AppPropsTypes = {
 function App(props: AppPropsTypes) {
     return (
         <StyledApp className="App" id={"home"}>
-            <Header/>
             <Sidebar/>
             <ContentBox/>
         </StyledApp>
@@ -23,7 +22,7 @@ function App(props: AppPropsTypes) {
 const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   overflow: hidden;`
 export default App;

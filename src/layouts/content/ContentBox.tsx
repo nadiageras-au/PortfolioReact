@@ -6,22 +6,25 @@ import {Projects} from "../sections/projects/Projects";
 import {Contacts} from "../sections/contacts/Contacts";
 import {Services} from "../sections/services/Services";
 import {myTheme} from "../../styles/Theme.styled";
+import {Testimonials} from "../sections/testimonials/Testimonials";
+import {Header} from "../header/Header";
 
 
 export const ContentBox = () => {
     return (
         <StyledBox>
-            <Main/>
-            <Skills/>
-            <Services/>
-            <Projects/>
-            <Contacts/>
+            <Header/>
+            {/*<Main/>*/}
+            {/*<Skills/>*/}
+            {/*<Projects/>*/}
+            {/*<Services/>*/}
+            {/*<Testimonials/>*/}
+            {/*<Contacts/>*/}
         </StyledBox>
     );
 };
 
 const StyledBox = styled.main`
-  background-color:${myTheme.colors.contentBg};
-  padding: 100px 0 100px 300px;
+  padding: 100px 0 100px 400px;
 
 `
